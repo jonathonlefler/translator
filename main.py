@@ -1,11 +1,28 @@
 #!/usr/bin/env python3
-#Lefler
+"""
+Written by Tray(zi)o - Lefler
+The goal of this program is to take in Manga raws and translate them,
+spitting out new images with the translated text.
+
+Functionality:
+Read in and generate image library of Hiragana, Katakana, and Romaji using a single font library
+Finds one match using `あ.png`(Hiragana: a) in raw2.png, but can't find it in `raw.png`
+TODO: Find multiple correct matches
+TODO: Replace the found character with Romaji(May not have to actually put it on the image)
+TODO: Translate the Romaji to selected language(english support only for now)
+TODO: Put the translated word onto the image in the proper spot
+TODO: Save the new image
+
+Things I think need to be done:
+TODO: Generate multiple image libraries using different fonts to increase the chance of a match
+TODO: unzip and zip on the fly for font libraries, as they are relatively large(~50MB a piece) 7zip
+"""
 
 import sys
 import csv
 import cv2
 from PIL import Image, ImageDraw, ImageFont
-#import Image
+
 from matplotlib import pyplot as plt
 
 
